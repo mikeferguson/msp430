@@ -1,23 +1,22 @@
-*******************************************************************************
+#MSP430 Sandbox
 This is a sandbox full of stuff/garbage for the TI MSP430 (mostly targeting
 launchpad hardware right now).
 
 Do not expect anything here to work as (not) advertised.
-*******************************************************************************
-Setup of development environment (Ubuntu 12.04):
 
-gcc and libc:
-  sudo apt-get install gcc-msp430 msp430-libc mspdebug msp430mcu
+#Setup of development environment (Ubuntu 12.04):
 
-gdb:
-  sudo apt-get install gdb-msp430
-  (this will probably fail, complaining about overwriting gdb __init__.py, so:)
-  cd /var/cache/apt/archives/
-  sudo dpkg -i --force-overwrite gdb-msp430-<lots of crap>.deb
+## gcc and libc
+* `sudo apt-get install gcc-msp430 msp430-libc mspdebug msp430mcu`
 
-*******************************************************************************
-Connecting to Launchpad
+## gdb
+ * sudo apt-get install gdb-msp430 (this will probably fail, complaining about overwriting gdb __init__.py, so:)
+   * `cd /var/cache/apt/archives/`
+   * `sudo dpkg -i --force-overwrite gdb-msp430-<lots of crap>.deb`
 
+#Connecting to Launchpad
+
+```
 $> sudo mspdebug rf2500
 MSPDebug version 0.18 - debugging tool for MSP430 MCUs
 Copyright (C) 2009-2011 Daniel Beer <dlbeer@gmail.com>
@@ -55,4 +54,5 @@ Writing   32 bytes to ffe0 [section: .vectors]...
 
 (mspdebug) run
 Running. Press Ctrl+C to interrupt...
+```
 
