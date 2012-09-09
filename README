@@ -7,7 +7,7 @@ Do not expect anything here to work as (not) advertised.
 Setup of development environment (Ubuntu 12.04):
 
 gcc and libc:
-  sudo apt-get install gcc-msp430 msp430-libc mspdebug
+  sudo apt-get install gcc-msp430 msp430-libc mspdebug msp430mcu
 
 gdb:
   sudo apt-get install gdb-msp430
